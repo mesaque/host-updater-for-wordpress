@@ -34,8 +34,11 @@ if( false === $client_list ):
 endif;
 
 foreach( $client_list as $client ):
+
+	if( false === $client['enabled'] ) continue;
+
 	if ( ! $ssh_connection = get_connection( $client ) ):
-		echo "Cant connect thru SSH\n";
+		echo "Can't connect thru SSH\n";
 		continue;
 	endif;
 

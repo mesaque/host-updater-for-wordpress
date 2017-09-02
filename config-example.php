@@ -16,6 +16,7 @@ return [
 	],
 	'clients' => [
 		[
+			'enabled'             => true,
 			'domain'              => '',
 			'action'              => '',
 			'job'                 => '',
