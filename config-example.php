@@ -6,6 +6,7 @@ return [
 		'smtp_user'     => '',
 		'smtp_password' => '',
 		'smtp_port'     => '',
+		'from'          => '',
 		'use_tls'       => true,
 	],
 	'administration' => [
@@ -22,11 +23,12 @@ return [
 			'administrator_name'  => '',
 			'administrator_mail'  => '',
 			'ssh'                 => [
-				'host'        => '',
-				'user'        => '',
-				'password'    => '',
-				'port'        => '',
-				'private_key' => '',
+				'host'                 => '',
+				'user'                 => '',
+				'password'             => '',
+				'port'                 => '',
+				'private_key'          => '',
+				'private_key_password' => '',
 			],
 			'excludes' => [
 				'themes'  => '',
