@@ -6,7 +6,8 @@ return [
 		'smtp_user'     => '',
 		'smtp_password' => '',
 		'smtp_port'     => '',
-		'from'          => '',
+		'from_mail'     => '',
+		'from_username' => '',
 		'use_tls'       => true,
 	],
 	'administration' => [

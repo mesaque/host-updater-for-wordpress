@@ -42,8 +42,18 @@ foreach( $client_list as $client ):
 		continue;
 	endif;
 
-	echo get_wp_version( $ssh_connection, $client );
-	echo get_plugins_list( $ssh_connection, $client );
-	echo get_themes_list( $ssh_connection, $client );
+	switch ( $client['action'] ):
+		case 1:
+			// Just Notify
+			notify_client( $client, $ssh_connection, 1 );
+			break;
+		case 2:
+			// Just update
+			break;
+		
+		default:
+			// Update and Notify
+			break;
+	endswitch;
 
 endforeach;
