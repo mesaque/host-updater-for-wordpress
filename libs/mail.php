@@ -20,6 +20,7 @@ function mail_service( $client, $subject, $message )
 	$message = (new Swift_Message( $subject ))
 	  ->setFrom([ $configParams['mail_service']['from_mail'] => $configParams['mail_service']['from_username'] ])
 	  ->setTo( [ $client['administrator_mail'] => $client['administrator_name'] ] )
+	  ->setCc( [ $configParams['administration']['administrator_mail'] => $configParams['administration']['administrator_name'] ] )
 	  ->setContentType( "text/html; charset=UTF-8" )
 	  ->setBody( $message )
 	  ;
