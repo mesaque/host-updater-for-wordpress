@@ -49,10 +49,13 @@ foreach( $client_list as $client ):
 			break;
 		case 2:
 			// Just update
+			update_client( $client, $ssh_connection );
 			break;
 		
 		default:
 			// Update and Notify
+			$updated_list = update_client( $client, $ssh_connection );
+			notify_client( $client, $ssh_connection, 2, $updated_list );
 			break;
 	endswitch;
 

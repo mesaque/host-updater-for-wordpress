@@ -20,12 +20,16 @@ function get_connection( $client )
 				return false;
 		endif;
 
+		$ssh->setTimeout(0);
+		
 		return $ssh;
 	endif;
 
 	if ( !$ssh->login( $client['ssh']['user'] , $client['ssh']['password'] ) ):    	
 		return false;
 	endif;
+
+	$ssh->setTimeout(0);
 
 	return $ssh;
 }
